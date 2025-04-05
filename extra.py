@@ -1,6 +1,5 @@
 from number import Number
 
-num = Number(990)
+num = Number(-4)
 
-print(num.digit_count())
-print(num.sum_of_digits())
+print(num.binary_representation())

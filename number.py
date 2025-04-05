@@ -50,7 +50,7 @@ class Number:
             return False
         else:
             for i in range(3, sqrt(self.number)+1, 2):
-                if self.number % i:
+                if self.number % i == 0:
                     return False
             return True
 
@@ -65,7 +65,7 @@ class Number:
             return bin_str[2:]
         
     def is_palindrome(self)->bool:
-        """Checks if number is palindrome"""
+        """Checks if number is palindrome or not: ignores negative sign"""
 
         #ignore negative sign
         num = abs(self.number)
@@ -81,3 +81,18 @@ class Number:
 
         #check if original number is equal to its reversed version
         return original_num == reversed_num
+    
+    def is_armstrong(self)->bool:
+        """Checks if number is Armstrong or not: ignores negative sign"""
+
+        #ARMSTRONG NUMBER:
+        # 153: (1**3) + (5**3) + (3**3) == 153 (True)
+        
+        temp_num = abs(self.number)
+        armstrong_sum = 0
+
+        while temp_num != 0:
+            armstrong_sum += (temp_num%10)**(self.__total_digits)
+            temp_num //= 10
+        
+        return armstrong_sum == self.number

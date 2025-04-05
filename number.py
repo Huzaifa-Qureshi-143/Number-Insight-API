@@ -11,8 +11,8 @@ class Number:
 
     #for total digit count  
     def digit_count(self):
-        return len(str(abs(self.number)))
-    
-    #for sum of digits
-    def sum_of_digits():
-        pass
+        count = 0
+        while self.number != 0:
+            self.number //= 10
+            count += 1
+        return count   

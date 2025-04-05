@@ -9,6 +9,7 @@ class Number:
         self.__digits_logic()
     
     def __digits_logic(self):
+        """Calculates total digits and their sum"""
         temp_num = abs(self.number)
 
         while temp_num != 0:
@@ -48,7 +49,7 @@ class Number:
         elif self.number % 2 == 0:
             return False
         else:
-            for i in range(3, sqrt(self.number)+1):
+            for i in range(3, sqrt(self.number)+1, 2):
                 if self.number % i:
                     return False
             return True
@@ -62,3 +63,5 @@ class Number:
             return '-' + bin_str[2:]
         else:
             return bin_str[2:]
+        
+    

@@ -64,4 +64,20 @@ class Number:
         else:
             return bin_str[2:]
         
-    
+    def is_palindrome(self)->bool:
+        """Checks if number is palindrome"""
+
+        #ignore negative sign
+        num = abs(self.number)
+
+        reversed_num = 0
+        original_num = num
+
+        while num != 0:
+            #extract last digit and add to reversed number
+            reversed_num = (reversed_num * 10) + (num % 10)
+            #remove last digit
+            num //= 10
+
+        #check if original number is equal to its reversed version
+        return original_num == reversed_num

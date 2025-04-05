@@ -7,7 +7,6 @@ class NumberInsightResponse(BaseModel):
     is_prime: bool
     digit_count: int
     sum_of_digits: int
-    is_perfect: bool
     binary_representation: str
     is_palindrome: bool
     is_armstrong: bool

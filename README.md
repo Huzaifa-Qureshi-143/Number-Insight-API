@@ -1,4 +1,4 @@
-# Simple Number Insights API
+# Simple Number Insights API (Practice Project)
 
 ## Endpoint(s)
 
